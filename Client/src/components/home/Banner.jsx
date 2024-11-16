@@ -9,14 +9,14 @@ const Banner = () => {
     >
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="hero-content text-neutral-content text-center">
-        <div className="max-w-md">
+        <div className="max-w-md lg:max-w-2xl">
           <h1 className="mb-5 text-5xl font-bold">Welcome To Gadget Shop</h1>
           <p className="mb-5">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
+            Conveniently evolve bricks-and-clicks strategic theme areas via
+            magnetic web services. Dramatically optimize visionary e-business
+            before collaborative data.
           </p>
-          <button className="btn btn-primary">Get Started</button>
+          <button className="btn bg-red-800 border-none text-white hover:bg-red-600">Get Started</button>
         </div>
       </div>
     </div>
