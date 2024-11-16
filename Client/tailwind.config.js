@@ -7,7 +7,9 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      minHeight: { 'outlet': 'calc(100vh - 64px)', }
+    },
   },
   plugins: [daisyui],
   daisyui: {
