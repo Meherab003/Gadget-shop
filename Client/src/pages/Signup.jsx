@@ -1,21 +1,25 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import { useForm } from "react-hook-form";
+import GoogleSignin from "../components/authentication/GoogleSignin";
 
 const Signup = () => {
-  const { createUser } = useAuth();
+  const { createUser, logOut } = useAuth();
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
   } = useForm();
+  const navigate = useNavigate();
 
   const onSubmit = (data) => {
     createUser(data.email, data.password);
+    logOut();
+    navigate("/sign-in");
   };
   return (
-    <div className="hero bg-base-200 min-h-outlet">
+    <div className="hero bg-base-200 min-h-screen">
       <div className="hero-content flex-col lg:flex-row-reverse lg:gap-10">
         <div className="text-center lg:text-left">
           <h1 className="text-4xl lg:text-5xl font-bold my-3 lg:my-6">
@@ -102,6 +106,7 @@ const Signup = () => {
               </p>
             </div>
           </form>
+          <GoogleSignin />
         </div>
       </div>
     </div>
