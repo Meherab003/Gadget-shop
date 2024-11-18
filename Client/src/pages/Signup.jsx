@@ -88,6 +88,23 @@ const Signup = () => {
                 </p>
               )}
             </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Role</span>
+              </label>
+              <select className="select select-bordered w-full max-w-xs"
+              {
+                ...register("role", {required: true})
+              }>
+                <option value='buyer'>Buyer</option>
+                <option value='seller'>Seller</option>
+              </select>
+              {
+                errors.role && (
+                  <p className="text-sm text-red-500 font-light">You must select a role</p>
+                )
+              }
+            </div>
             <div className="form-control mt-6">
               <button
                 type="submit"

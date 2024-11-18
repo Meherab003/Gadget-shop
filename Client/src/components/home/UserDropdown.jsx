@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import { MdLogout } from "react-icons/md";
 
@@ -20,7 +21,7 @@ const UserDropdown = () => {
         className="dropdown-content menu bg-transparent backdrop-blur-sm rounded-lg z-[1] w-52 p-2 shadow border border-red-500"
       >
         <li className="text-white font-medium hover:border  hover:text-red-500 hover:rounded-lg hover:bg-transparent">
-          <a>Item 1</a>
+          <Link>Dashboard</Link>
         </li>
         <li className="text-white font-medium">
           <button onClick={handleSignOut} className="btn btn-sm "><MdLogout className="text-lg"/> Sign Out</button>
